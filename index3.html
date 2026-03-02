@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Animation</title>
+    <style>
+        /* পুরো স্ক্রিনের ডিজাইন */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* ব্যাকগ্রাউন্ড কালো */
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* লেখার কন্টেইনার */
+        .container {
+            text-align: center;
+        }
+
+        /* টেক্সট অ্যানিমেশন */
+        .text {
+            font-size: 80px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 1px #ff0055; /* লেখার আউটলাইন */
+            background: linear-gradient(#ff0055, #ff0055);
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-position: -600px 0;
+            animation: backcolor 3s linear infinite alternate;
+            text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055;
+        }
+
+        @keyframes backcolor {
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        /* হার্ট বা হৃদপিণ্ড অ্যানিমেশন */
+        .heart {
+            font-size: 100px;
+            color: #ff0055;
+            animation: beat 0.8s infinite alternate;
+            margin-bottom: 20px;
+        }
+
+        @keyframes beat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.3);
+            }
+        }
+
+        /* ছোট ছোট ভাসমান কণা */
+        .glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- হার্ট ইমোজি -->
+        <div class="heart">🖕</div>
+        <!-- এনিমেটেড টেক্সট -->
+        <div class="text">Fuck You</div>
+    </div>
+
+</body>
+</html>
